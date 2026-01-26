@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Stu_Net-Core\\Net_Core_MVC\\Net_Core_MVC.csproj",
+      "projectUniqueName": "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC\\Net_Core_MVC.csproj",
       "projectName": "Net_Core_MVC",
-      "projectPath": "D:\\Stu_Net-Core\\Net_Core_MVC\\Net_Core_MVC.csproj",
+      "projectPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC\\Net_Core_MVC.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Stu_Net-Core\\Net_Core_MVC\\obj\\",
+      "outputPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
