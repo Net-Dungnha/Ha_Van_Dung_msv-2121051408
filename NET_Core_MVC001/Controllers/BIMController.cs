@@ -1,8 +1,16 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using Stu_MVC_P.NET_Core_MVC001.Models;
+
 namespace Stu_MVC_P.NET_Core_MVC001.Controllers
 {
+    public class BMI
+    {
+        public double Height { get; set; }
+        public double Weight { get; set; }
+        public double Value { get; set; }
+        public string Result { get; set; }
+    }
+
     public class BIMController : Controller
     {
         [HttpGet]
@@ -16,14 +24,14 @@ namespace Stu_MVC_P.NET_Core_MVC001.Controllers
         {
            if (Models != null && Models.Height > 0 && Models.Weight > 0)
            {
-                Models.BMI = Models.Weight / (Models.Height * Models.Height);
-                if (Models.BMI < 18.5){
+                Models.Value = Models.Weight / (Models.Height * Models.Height);
+                if (Models.Value < 18.5){
                     Models.Result = "Underweight";
                 }
-                else if (Models.BMI >= 18.5 && Models.BMI < 24.9){
+                else if (Models.Value >= 18.5 && Models.Value < 24.9){
                     Models.Result = "Normal weight";
                 }
-                else if (Models.BMI >= 25 && Models.BMI < 29.9){
+                else if (Models.Value >= 25 && Models.Value < 29.9){
                     Models.Result = "Overweight";
                 }
                 else{

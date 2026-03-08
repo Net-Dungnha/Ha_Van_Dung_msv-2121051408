@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Stu_Net-Core\\Prac_003\\Prac_003.csproj",
+      "projectUniqueName": "D:\\Stu_Net-Core\\Stu_MVC_P\\Prac_003\\Prac_003.csproj",
       "projectName": "Prac_003",
-      "projectPath": "D:\\Stu_Net-Core\\Prac_003\\Prac_003.csproj",
+      "projectPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\Prac_003\\Prac_003.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Stu_Net-Core\\Prac_003\\obj\\",
+      "outputPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\Prac_003\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"

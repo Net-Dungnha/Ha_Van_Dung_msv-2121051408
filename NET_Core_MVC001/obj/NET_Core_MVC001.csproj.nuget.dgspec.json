@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC001\\NET_Core_MVC001.csproj": {}
+    "D:\\Stu_Net-Core\\Stu_MVC_P\\NET_Core_MVC001\\NET_Core_MVC001.csproj": {}
   },
   "projects": {
-    "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC001\\NET_Core_MVC001.csproj": {
+    "D:\\Stu_Net-Core\\Stu_MVC_P\\NET_Core_MVC001\\NET_Core_MVC001.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC001\\NET_Core_MVC001.csproj",
+        "projectUniqueName": "D:\\Stu_Net-Core\\Stu_MVC_P\\NET_Core_MVC001\\NET_Core_MVC001.csproj",
         "projectName": "NET_Core_MVC001",
-        "projectPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC001\\NET_Core_MVC001.csproj",
+        "projectPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\NET_Core_MVC001\\NET_Core_MVC001.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\Net_Core_MVC001\\obj\\",
+        "outputPath": "D:\\Stu_Net-Core\\Stu_MVC_P\\NET_Core_MVC001\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
