@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Student Page";
+}
+
+<h2>Nhập thông tin</h2>
+
+<form method="post">
+
+    <div>
+        <label>Họ tên:</label>
+        <input type="text" name="name" />
+    </div>
+
+    <br>
+
+    <div>
+        <label>Tuổi:</label>
+        <input type="number" name="age" />
+    </div>
+
+    <br>
+
+    <button type="submit">Gửi</button>
+
+</form>
+
+<br>
+
+<h3 style="color:green">
+    @ViewBag.Message
+</h3>
