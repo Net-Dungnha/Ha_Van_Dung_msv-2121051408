@@ -60,6 +60,7 @@ namespace Prac_Lesson007.Controllers
         // GET: Students/Create
         public IActionResult Create()
         {
+            ViewBag.CourseId = new SelectList(_context.Courses, "Id", "Name");
             return View();
         }
 
@@ -68,7 +69,7 @@ namespace Prac_Lesson007.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Age,Class")] Student student)
+        public async Task<IActionResult> Create([Bind("Id,Name,Age,Class,CourseId")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -76,6 +77,7 @@ namespace Prac_Lesson007.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.CourseId = new SelectList(_context.Courses, "Id", "Name", student.CourseId);
             return View(student);
         }
 
@@ -92,6 +94,7 @@ namespace Prac_Lesson007.Controllers
             {
                 return NotFound();
             }
+            ViewBag.CourseId = new SelectList(_context.Courses, "Id", "Name", student.CourseId);
             return View(student);
         }
 
@@ -100,7 +103,7 @@ namespace Prac_Lesson007.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Age,Class")] Student student)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Age,Class,CourseId")] Student student)
         {
             if (id != student.Id)
             {
@@ -127,6 +130,7 @@ namespace Prac_Lesson007.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.CourseId = new SelectList(_context.Courses, "Id", "Name", student.CourseId);
             return View(student);
         }
 
