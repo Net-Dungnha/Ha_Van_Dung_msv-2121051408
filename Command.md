@@ -6,6 +6,9 @@ dotnet add package Microsoft.EntityFrameworkCore --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 9.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Tools --version 9.0.0
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 9.0.0
+
 
 # Tao model : Models/Student.cs
 vd: C#
@@ -52,7 +55,7 @@ dotnet ef database update
 
 # Generate CRUD tu dong
 # cai code generator
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 9.0.0
 
 # Chay 
 dotnet aspnet-codegenerator controller \
@@ -62,6 +65,8 @@ dotnet aspnet-codegenerator controller \
 --relativeFolderPath Controllers \
 --useDefaultLayout \
 --referenceScriptLibraries
+
+dotnet aspnet-codegenerator controller -name StudentsController -m Student -dc AppDbContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
 
 # Ket qua khoi tao
 Controllers
