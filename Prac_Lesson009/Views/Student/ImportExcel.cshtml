@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Import Excel";
+}
+
+<h1>Import Excel</h1>
+<p>Upload file Excel với định dạng cột: <strong>Name</strong>, <strong>Email</strong>, <strong>Class</strong>.</p>
+
+<form asp-controller="Student" asp-action="ImportExcel" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="file" class="form-label">Chọn file Excel (.xlsx hoặc .xls)</label>
+        <input type="file" class="form-control" id="file" name="file" accept=".xlsx,.xls" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Import</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info mt-3">@ViewBag.Message</div>
+}
+
+<div class="mt-4">
+    <h5>Mẫu dữ liệu Excel</h5>
+    <table class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nguyen Van A</td>
+                <td>nguyenvana@example.com</td>
+                <td>10A1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
