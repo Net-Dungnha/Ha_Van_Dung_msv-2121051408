@@ -1,0 +1,79 @@
+@model IEnumerable<DemoMVC.Models.Entity.Categories>
+
+@{
+    ViewData["Title"] = "Danh sách Thể loại";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="text-primary"><i class="bi bi-tags-fill"></i> Quản lý Thể loại</h1>
+    <a asp-action="Create" class="btn btn-success shadow-sm">
+        <i class="bi bi-plus-circle"></i> Thêm Thể loại mới
+    </a>
+</div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <form asp-action="Index" method="get" class="row g-3 align-items-center">
+            <div class="col-md-9">
+                <div class="input-group">
+                    <input type="text" name="searchString" value="@ViewData["CurrentFilter"]" class="form-control" placeholder="Tìm theo tên thể loại hoặc mô tả..." />
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="bi bi-search"></i> Tìm kiếm
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a asp-action="Index" class="btn btn-outline-secondary w-100">Xóa bộ lọc</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover table-striped mb-0 align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th style="width: 80px;">ID</th>
+                        <th>Tên thể loại</th>
+                        <th>Mô tả</th>
+                        <th class="text-center" style="width: 250px;">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><strong>@item.Id</strong></td>
+                                <td><span class="text-secondary fw-semibold">@item.TenTheLoai</span></td>
+                                <td>@item.Mota</td>
+                                <td class="text-center">
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning text-white">
+                                            <i class="bi bi-pencil-square"></i> Sửa
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info text-white">
+                                            <i class="bi bi-eye"></i> Chi tiết
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                                            <i class="bi bi-trash"></i> Xóa
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4" class="text-center py-4 text-muted">Không tìm thấy thể loại nào.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

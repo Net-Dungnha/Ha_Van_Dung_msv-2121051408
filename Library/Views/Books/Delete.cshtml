@@ -1,0 +1,61 @@
+@model DemoMVC.Models.Entity.Book
+
+@{
+    ViewData["Title"] = "Xóa Sách";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-danger text-white py-3">
+                <h4 class="mb-0"><i class="bi bi-exclamation-triangle-fill"></i> Xác nhận xóa Sách</h4>
+            </div>
+            <div class="card-body p-4">
+                <h5 class="text-danger mb-4">Bạn có chắc chắn muốn xóa cuốn sách này không? Hành động này không thể hoàn tác.</h5>
+
+                <table class="table table-bordered mb-4">
+                    <tr>
+                        <th class="bg-light" style="width: 30%;">Tên sách</th>
+                        <td>@Model.TenSach</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">ISBN</th>
+                        <td><code>@Model.ISBN</code></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Tác giả</th>
+                        <td>@(Model.Author != null ? Model.Author.TenTacGia : "N/A")</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Thể loại</th>
+                        <td>@(Model.Categories != null ? Model.Categories.TenTheLoai : "N/A")</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Năm xuất bản</th>
+                        <td>@Model.NamXuatBan</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Nhà xuất bản</th>
+                        <td>@Model.NhaXuatBan</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Mô tả</th>
+                        <td>@Model.Mota</td>
+                    </tr>
+                </table>
+
+                <form asp-action="Delete" method="post">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left-short"></i> Quay lại
+                        </a>
+                        <button type="submit" class="btn btn-danger px-4">
+                            <i class="bi bi-trash"></i> Xóa vĩnh viễn
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

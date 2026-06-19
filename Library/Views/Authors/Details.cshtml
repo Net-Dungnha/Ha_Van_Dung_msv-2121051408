@@ -1,0 +1,48 @@
+@model DemoMVC.Models.Entity.Author
+
+@{
+    ViewData["Title"] = "Chi tiết Tác giả";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-info text-white py-3">
+                <h4 class="mb-0"><i class="bi bi-info-circle-fill"></i> Chi tiết Tác giả</h4>
+            </div>
+            <div class="card-body p-4">
+                <table class="table table-striped table-bordered mb-4">
+                    <tr>
+                        <th class="bg-light" style="width: 30%;">ID</th>
+                        <td><strong>@Model.Id</strong></td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Tên tác giả</th>
+                        <td>@Model.TenTacGia</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Năm sinh</th>
+                        <td>@Model.NamSinh</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Quốc tịch</th>
+                        <td>@Model.QuocTich</td>
+                    </tr>
+                    <tr>
+                        <th class="bg-light">Mô tả</th>
+                        <td>@Model.Mota</td>
+                    </tr>
+                </table>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        <i class="bi bi-arrow-left-short"></i> Quay lại
+                    </a>
+                    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning text-white px-4">
+                        <i class="bi bi-pencil-square"></i> Chỉnh sửa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
